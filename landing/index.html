@@ -102,12 +102,12 @@ nav.main a:hover{background:var(--ice2);color:var(--blue)}
 .door-top{display:flex;align-items:center;gap:12px;color:#bcd9ff;font-weight:600;font-size:.95rem;margin-bottom:18px}
 .door-top .avatar{width:46px;height:46px;border-radius:50%;background:var(--grad);display:grid;place-items:center;font-weight:800;color:#fff;font-size:1.2rem;box-shadow:0 6px 16px rgba(71,195,255,.45)}
 .door-top small{display:block;color:#7fa8cf;font-weight:500;font-size:.8rem}
-.lock-ring{position:relative;width:190px;height:190px;margin:6px auto 18px}
+.lock-ring{position:relative;width:230px;height:230px;margin:6px auto 18px}
 .lock-ring .ring{position:absolute;inset:0;border-radius:50%;border:2px dashed rgba(127,209,255,.4);animation:spin 14s linear infinite}
 @keyframes spin{to{transform:rotate(360deg)}}
-.lock-ring .core{position:absolute;inset:26px;border-radius:50%;background:radial-gradient(circle at 35% 30%,#2a5b96,#123059);display:grid;place-items:center;box-shadow:inset 0 4px 18px rgba(0,0,0,.35),0 0 0 6px rgba(71,195,255,.12);animation:coreGlow 2.6s ease-in-out infinite}
+.lock-ring .core{position:absolute;inset:14px;border-radius:50%;background:#123059;display:grid;place-items:center;overflow:hidden;box-shadow:inset 0 4px 18px rgba(0,0,0,.35),0 0 0 6px rgba(71,195,255,.12);animation:coreGlow 2.6s ease-in-out infinite}
 @keyframes coreGlow{0%,100%{box-shadow:inset 0 4px 18px rgba(0,0,0,.35),0 0 0 6px rgba(71,195,255,.12)}50%{box-shadow:inset 0 4px 18px rgba(0,0,0,.35),0 0 0 14px rgba(71,195,255,.22)}}
-.lock-ring .core svg{width:74px;height:74px;stroke:#7fd1ff}
+.lock-ring .core img{width:100%;height:100%;object-fit:cover;object-position:38% center;display:block}
 .eta-line{display:flex;align-items:center;justify-content:space-between;background:rgba(71,195,255,.1);border:1px solid rgba(127,209,255,.3);border-radius:14px;padding:11px 15px;color:#dcefff;font-size:.92rem;font-weight:600}
 .eta-line b{color:#7fd1ff;font-size:1.05rem}
 .float-card{position:absolute;background:#fff;border-radius:16px;box-shadow:var(--shl);padding:12px 16px;display:flex;align-items:center;gap:10px;font-weight:700;font-size:.92rem;border:1px solid var(--line);animation:floaty 5.2s ease-in-out infinite}
@@ -406,7 +406,7 @@ footer{background:#0a1c31;color:#9db9d6;padding:46px 0 100px;font-size:.9rem}
         <div class="lock-ring">
           <div class="ring"></div>
           <div class="core">
-            <svg viewBox="0 0 24 24" fill="none" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="8" cy="15" r="4"/><path d="m10.9 12.1 8.6-8.6M15 8l2.5 2.5M18 5l2 2"/></svg>
+            <img src="assets/ori-profile.jpg" alt="רוסלן בעבודה" width="981" height="983">
           </div>
         </div>
         <div class="eta-line"><span>זמן הגעה משוער</span><b>15-30 דקות</b></div>
@@ -976,3 +976,4 @@ mq.innerHTML+=mq.innerHTML;
 </script>
 </body>
 </html>
+
