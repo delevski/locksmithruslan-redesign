@@ -209,6 +209,23 @@ nav.main a:hover{background:var(--ice2);color:var(--blue)}
 .cmp-row:nth-child(odd){background:#f6fbff}
 .yes{color:#16a34a}.no{color:#dc2626}
 
+
+/* ---------- real work gallery ---------- */
+.real-work{padding:84px 0;background:#fff}
+.real-work-head{display:flex;align-items:end;justify-content:space-between;gap:28px;margin-bottom:34px}
+.real-work-head .sec-sub{max-width:620px}
+.real-work-link{color:var(--blue);font-weight:800;white-space:nowrap}
+.work-gallery{display:grid;grid-template-columns:1.15fr .85fr .85fr;grid-template-rows:260px 260px;gap:16px}
+.work-shot{position:relative;overflow:hidden;border-radius:22px;background:#dce7f3;box-shadow:var(--sh)}
+.work-shot:first-child{grid-row:1/3}
+.work-shot img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .55s ease}
+.work-shot:hover img{transform:scale(1.04)}
+.work-shot .caption{position:absolute;inset:auto 12px 12px 12px;padding:12px 14px;border-radius:14px;background:rgba(5,28,54,.86);color:#fff;backdrop-filter:blur(8px);font-weight:800}
+.work-shot .caption small{display:block;margin-top:3px;color:#cfe3f6;font-size:.78rem;font-weight:500}
+.work-proof{display:flex;align-items:center;gap:14px;margin-top:22px;padding:18px 20px;border:1px solid var(--line);border-radius:18px;background:var(--ice)}
+.work-proof svg{flex:0 0 34px;width:34px;height:34px;stroke:var(--blue)}
+.work-proof strong{display:block;font-size:1.02rem}.work-proof span{color:var(--muted);font-size:.9rem}
+
 /* ---------- reviews ---------- */
 .reviews{padding:84px 0}
 .rev-head{display:flex;align-items:center;gap:18px;flex-wrap:wrap;margin-top:8px}
@@ -288,6 +305,8 @@ footer{background:#0a1c31;color:#9db9d6;padding:46px 0 100px;font-size:.9rem}
 /* ---------- responsive ---------- */
 @media(max-width:1020px){
   .svc-grid,.pain-grid,.why-grid{grid-template-columns:repeat(2,1fr)}
+  .work-gallery{grid-template-columns:1fr 1fr;grid-template-rows:360px 250px}
+  .work-shot:first-child{grid-column:1/3;grid-row:auto}
   .price-grid{grid-template-columns:repeat(2,1fr)}
   .stats .wrap{grid-template-columns:repeat(2,1fr)}
   .hero .wrap,.final .wrap{grid-template-columns:1fr;gap:40px}
@@ -300,6 +319,10 @@ footer{background:#0a1c31;color:#9db9d6;padding:46px 0 100px;font-size:.9rem}
   .logo{font-size:1rem}
   .hero{padding:132px 0 64px}
   .svc-grid,.pain-grid,.why-grid,.price-grid,.rev-grid,.steps-track{grid-template-columns:1fr}
+  .real-work-head{align-items:start;flex-direction:column}
+  .work-gallery{grid-template-columns:1fr 1fr;grid-template-rows:330px 220px 220px}
+  .work-shot:first-child{grid-column:1/3}
+  .work-shot:nth-child(4){grid-column:1/3}
   .foot-grid{grid-template-columns:1fr;gap:26px}
   .sticky-bar{display:flex}
   .fc1{right:-4px}.fc2{left:-4px}.fc3{left:-4px}
@@ -337,6 +360,7 @@ footer{background:#0a1c31;color:#9db9d6;padding:46px 0 100px;font-size:.9rem}
       <a href="#emergency">חירום</a>
       <a href="#services">שירותים</a>
       <a href="#prices">מחירון</a>
+      <a href="#work">עבודות מהשטח</a>
       <a href="#reviews">ביקורות</a>
       <a href="#faq">שאלות</a>
     </nav>
@@ -641,6 +665,43 @@ footer{background:#0a1c31;color:#9db9d6;padding:46px 0 100px;font-size:.9rem}
       <div class="cmp-row"><div>מחירון פתוח ושקוף באתר</div><div class="yes">✓</div><div class="no">✕</div></div>
       <div class="cmp-row"><div>אחריות מעוגנת בהסכם</div><div class="yes">✓</div><div class="no">✕</div></div>
       <div class="cmp-row"><div>מוקד זמין 24/6, כולל לילות</div><div class="yes">✓</div><div class="no">✕</div></div>
+    </div>
+  </div>
+</section>
+
+
+<!-- real business work gallery -->
+<section class="real-work" id="work">
+  <div class="wrap">
+    <div class="real-work-head reveal">
+      <div>
+        <span class="kicker">עבודות אמיתיות מהשטח</span>
+        <h2 class="sec-title">לא תמונות מאגר. עבודות של העסק.</h2>
+        <p class="sec-sub">התקנות ותיקונים שבוצעו בפועל ומופיעים בגלריה של מנעולן רוסלן - כדי שתדעו מי מגיע ומה רמת העבודה.</p>
+      </div>
+      <a class="real-work-link" href="https://he.locksmithruslan.co.il/%D7%92%D7%9C%D7%A8%D7%99%D7%94/" target="_blank" rel="noopener">לכל העבודות באתר הראשי ←</a>
+    </div>
+    <div class="work-gallery" data-stagger>
+      <figure class="work-shot">
+        <img src="assets/work/repaired-entry-door.jpg" alt="דלת כניסה לאחר תיקון והתקנת מנעול" loading="lazy" width="750" height="1000">
+        <figcaption class="caption">תיקון דלת כניסה<small>צילום מהשטח מתוך גלריית העסק</small></figcaption>
+      </figure>
+      <figure class="work-shot">
+        <img src="assets/work/keypad-access-installation.jpg" alt="מערכת בקרת כניסה עם קודן שהותקנה" loading="lazy" width="360" height="541">
+        <figcaption class="caption">התקנת בקרת כניסה<small>קודן ומערכת גישה</small></figcaption>
+      </figure>
+      <figure class="work-shot">
+        <img src="assets/work/wood-door-lock-repair.jpg" alt="תיקון מנגנון נעילה בדלת עץ" loading="lazy" width="360" height="480">
+        <figcaption class="caption">תיקון מנעול בדלת עץ<small>מנגנון נעילה רב-בריחי</small></figcaption>
+      </figure>
+      <figure class="work-shot">
+        <img src="assets/work/elock-smart-lock.jpg" alt="מנעול חכם שחור של אלוק" loading="lazy" width="360" height="360">
+        <figcaption class="caption">מנעול חכם ELOCK<small>פתיחה בקוד ובטביעת אצבע</small></figcaption>
+      </figure>
+    </div>
+    <div class="work-proof reveal">
+      <svg viewBox="0 0 24 24" fill="none" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/><circle cx="12" cy="12" r="10"/></svg>
+      <div><strong>עסק מקומי עם כתובת, טלפון ועבודות שאפשר לראות</strong><span>רח׳ ניצנה 21, בת ים · 050-99-79-800 · זמינות 24/6</span></div>
     </div>
   </div>
 </section>
